@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    background-color: #1109095b;
+    align-items: center;
+}
+
+.header > img {
+    margin-top: 3rem;
+    border-radius: 50%;
+    width: 200px
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    color: white;
+}

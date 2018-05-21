@@ -1,0 +1,32 @@
+.App {
+  background-color: #07703f;
+  min-height: 100% !important;
+  display: grid;
+  grid-template-columns: [col-start] 15% [col-header-fin]  auto;
+  grid-template-rows: [row-start] 6rem [col-pageTitle-fin] auto;
+}
+
+.App > .header {
+  position: fixed;
+  width: 15%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color:black;
+}
+
+.App > .pageTitle {
+  grid-column: col-header-fin / 3;
+  grid-row: row-start / 2;
+  z-index: 99;
+  right: 0;
+  
+}
+
+.App .corps-page {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 300;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  padding: 10px;
+}
