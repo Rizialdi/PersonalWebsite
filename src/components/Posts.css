@@ -1,0 +1,9 @@
+.corps-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+}
+
+.Posts .corps-page a {
+    color: black
+}
+

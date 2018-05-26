@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header';
-import PageTitle from './components/PageTitle'
-import Carte from './components/Carte'
+import Home from './components/Home';
+import Curriculum from './components/Curriculum';
+import Posts from './components/Posts';
+import Contacts from './components/Contacts';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header className="header" />
-        <PageTitle active_item = "Acceuil" className = 'pageTitle'/>
-        <div className = 'corps-page'> 
-          <Carte titre = 'Carte demo' description = 'Neat description' />
+      <Router>
+        <div> 
+          <Route exact path = '/' component = {Home} />
+          <Route path = '/curriculum' component = {Curriculum} />
+          <Route path = '/posts' component = {Posts} />
+          <Route path = '/contacts' component = {Contacts} />
         </div>
-      </div>
+      </Router>
     );
   }
 }

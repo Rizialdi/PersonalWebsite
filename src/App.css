@@ -1,5 +1,5 @@
 .App {
-  background-color: #07703f;
+  background-color: white;
   min-height: 100% !important;
   display: grid;
   grid-template-columns: [col-start] 250px [col-header-fin]  auto;
@@ -24,8 +24,8 @@
 }
 
 .App .corps-page {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 300;
+  font-family: 'Ubuntu';
+  font-weight: 200;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   padding: 10px;

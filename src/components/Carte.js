@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Carte.css'
+import { Link } from 'react-router-dom'
 
 class Carte extends Component {
     constructor(){
@@ -11,14 +12,14 @@ class Carte extends Component {
 
     render() {
         return (
-            <div className = 'carte-content'>
+            <Link to = {this.props.adresse} className = 'carte-content'>
                 <div className = 'carte-image'>
                 </div>
                 <div className = 'carte-description'>
                     <h1>{this.props.titre}</h1>
                     <p>{this.props.description}</p>
                 </div>
-            </div>
+            </Link>
         )
     }
 }

@@ -1,24 +1,9 @@
 import React, {Component} from 'react';
 import ListMenuItem from './List_menu_item'
 import './Header.css';
+import {NavLink } from 'react-router-dom'
 
 class Header extends Component {
-    constructor(){
-        super();
-        this.state = {
-            selectedMenuItem: 'Acceuil',
-        }
-    }
-
-    handlerClick = (item) => {
-        this.setState(() => {
-            return {
-                selectedMenuItem: item,
-            }
-        });
-        console.log('click sur ' + item)
-    }
-
     render () {
         let avatar = 'https://avatars2.githubusercontent.com/u/18710740?s=400&u=c11853b720d3288d376a3103cf5c8bb82c37fc13&v=4';
         
@@ -45,11 +30,14 @@ class Header extends Component {
         
         let list_menu = menu.map((item) => {
             return (
-                <ListMenuItem 
-                    onClicker = {this.handlerClick.bind(this, item.nom)} 
-                    className='list_menu_item' key = {item.nom} 
-                    item = {item} 
-                    selectedMenuItem = {this.state.selectedMenuItem} />
+                <NavLink 
+                    activeClassName = 'active'
+                    exact = {(item.nom === 'Acceuil') ? true : false}
+                    to = {(item.nom === 'Acceuil') ? '/' : item.nom} key = {item.nom} >
+                    <ListMenuItem  
+                        className='list_menu_item' 
+                        item = {item} />
+                </NavLink>
             )
         })
         
