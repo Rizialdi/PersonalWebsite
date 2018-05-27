@@ -19,13 +19,12 @@
     min-height: 10rem;
     overflow: hidden;
     background-size: cover;
-    background-position: 50%;
+    background-position: 60%;
     flex-grow: 3;
     order: 1;
     border-radius: 20px 20px 0 0;
     width: 100%;
-    background-image: url('https://d125fmws0bore1.cloudfront.net/assets/pages/ndop/nd013/image-syllabus-01@2x-798c1d495d8be24742365fd90770cdf5c86fedeafbfbd1eef6104b8b4aeebe39.jpg');
-}
+   }
 
 .carte-content > .carte-description {
     min-height: 10rem;
@@ -33,10 +32,15 @@
     flex-grow: 3;
     background-color: whitesmoke;
     border-top: 0.1em solid #d6ecff;
+    border-radius: 0 0 15px 15px;
+}
+
+.carte-content > .carte-description > p {
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    border-radius: 0 0 15px 15px;
 }
 
 .carte-content > .carte-description > h1 {

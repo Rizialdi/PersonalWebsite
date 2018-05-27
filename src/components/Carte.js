@@ -13,7 +13,7 @@ class Carte extends Component {
     render() {
         return (
             <Link to = {this.props.adresse} className = 'carte-content'>
-                <div className = 'carte-image'>
+                <div style={{backgroundImage: `url(${this.props.image})`}} className = 'carte-image'>
                 </div>
                 <div className = 'carte-description'>
                     <h1>{this.props.titre}</h1>
